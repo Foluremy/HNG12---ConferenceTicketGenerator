@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=JejuMyeongjo:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi:wght@400&display=swap');
+
+/* Ticket Container */
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+}
+
+/* Heading Content */
+.sub {
+    width: 100%;
+    font-size: 32px;
+    font-family: Alatsi;
+    color: #fff;
+    text-align: center;
+    margin: 32px auto 16px;
+}
+
+.sub-text {
+    text-align: center;
+    font-size: 16px;
+}
+
+/* ticket Container */
+.img {
+    position: relative;
+
+}
+
+/* Inner Ticket Container */
+.inner-container {
+    width: 250px;
+    height: 420px;
+    position: absolute;
+    top: 33%;
+    left: 39%;
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    background-color: rgba(3, 30, 33, 0.1);
+    border: 1px solid #24a0b5;
+    height: 448px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    color: #fff;
+}
+
+.inner-heading {
+    text-align: center;
+}
+
+.event-title {
+    font-size: 34px;
+    font-family: 'Road Rage';
+}
+
+.address {
+    font-size: 10px;
+    font-family: Roboto;
+}
+
+.inner-img {
+    border-radius: 12px;
+    background-color: rgba(3, 30, 33, 0.1);
+    border: 4px solid rgba(36, 160, 181, 0.5);
+    width: 150px;
+    height: 150px;
+}
+
+/* Inner Ticket Content */
+.inner-content {
+    width: 90%;
+    border-radius: 8px;
+    background-color: #08343c;
+    border: 1px solid #133d44;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    text-align: left;
+    color: #fff;
+    font-family: Roboto;
+    margin: 5px;
+}
+
+.sec {
+    align-items: stretch;
+    border-bottom: 1px solid #12464e;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.cell, .cell1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    gap: 4px;
+}
+    
+.cell {
+    border-right: 1px solid #12464e;
+}
+
+.label, .label2 {
+    line-height: 150%;
+    opacity: 0.33;
+    text-align: left;
+}
+
+.value {
+    line-height: 150%;
+}
+
+.value2, .value3 {
+    line-height: 150%;
+}
+
+.sec2 {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 4px;
+    font-size: 12px;
+}

@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=JejuMyeongjo:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage:wght@400&display=swap');
+
+/* Form Title */
+.form-heading {
+    width: 100%;
+}
+  
+.form-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.heading-content {
+  width: 100%;
+  position: relative;
+  font-size: 32px;
+}
+
+.heading-content, .text {
+  font-family: JejuMyeongjo;
+  color: #fff;
+}
+
+.form-progress {
+  width: 66.66%;
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  border-radius: 32px;
+  background-color: #08252b;
+  border: 1px solid #0e464f;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 24px;
+  gap: 32px;
+  text-align: left;
+  font-size: 16px;
+  color: #fafafa;
+  font-family: Roboto;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+.upload-section {
+    width: 500px;
+    border-radius: 24px;
+    background-color: #052228;
+    border: 1px solid #07373f;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px 24px 48px;
+    gap: 32px;
+    text-align: center;
+    font-size: 16px;
+    color: #fafafa;
+    font-family: Roboto;
+  }
+
+  .upload-title {
+    position: relative;
+    line-height: 150%;
+  }
+
+  .upload-parent {
+    width: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .upload-area {
+    width: 200px;
+    height: 200px;
+    background-color: #249fb57a;
+    border: 4px solid #2A9D8F;
+    border-radius: 32px;
+    padding: 2rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .preview-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+/* Overlay for the upload icon and text */
+.upload-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+/* Show the overlay on hover */
+.preview-container:hover .upload-overlay {
+  opacity: 1; 
+  position: relative;
+}
+
+  /* Form Details */
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #fullName, #email, #specialRequest {
+    background-color: transparent;
+  }
+  
+  #fullName, #email {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #07373f;
+    min-height: 40px;
+  }
+
+  #specialRequest {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #07373f;
+    min-height: 100px;
+  }
+
+
+/* Container for the input and icon */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+  /* Email icon styling */
+  .email-icon {
+    position: absolute;
+    left: 10px; 
+    color: #fff;
+    font-size: 20px; 
+  }
+
+  /* Input field styling */
+  .input-with-icon input {
+    padding-left: 40px; 
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+ 
+  input::placeholder, textarea::placeholder, input, textarea {
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  input.error {
+    border-color: #E63946;
+  }
+  
+  .error-message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #E63946;
+    font-size: 0.75rem;
+  }
+  
+  
+  @media (max-width: 640px) {
+    .form-container {
+      padding: 1rem;
+    }
+    
+    .upload-area {
+      padding: 1.5rem;
+    }
+  }
