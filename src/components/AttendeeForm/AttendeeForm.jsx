@@ -35,8 +35,8 @@ const AttendeeForm = ({onBack, onSubmit, initialValues}) => {
   };
 
   const uploadToCloudinary = async (file) => {
-    const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUD_NAME; 
-    const uploadPreset = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET; 
+    const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME; 
+    const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET; 
 
     const formData = new FormData();
     formData.append('file', file);
@@ -52,7 +52,9 @@ const AttendeeForm = ({onBack, onSubmit, initialValues}) => {
       );
 
       if (!response.ok) {
-        throw new Error('Upload failed');
+        const errorData = await response.json(); // Log the error response
+        console.error('Cloudinary API error:', errorData);
+        throw new Error(errorData.error.message || 'Upload failed');
       }
 
       const data = await response.json();
@@ -84,7 +86,8 @@ const AttendeeForm = ({onBack, onSubmit, initialValues}) => {
       setFormData({ ...formData, avatarUrl: imageUrl });
       setErrors({ ...errors, avatar: undefined });
     } catch (error) {
-      setErrors({ ...errors, avatar: 'Failed to upload image' });
+      console.error('Upload error:', error);
+      setErrors({ ...errors, avatar: 'Failed to upload image'  + error.message});
     } finally {
       setIsUploading(false);
     }
