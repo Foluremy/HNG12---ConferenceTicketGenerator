@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../AttendeeForm/AttendeeForm.css";
 import "./GeneratedTicket.css"
 import bg from "../../images/bg.png";

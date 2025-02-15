@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./TicketSelection.css"; 
 import NavIcon from '../../images/NavIcon.png';
 import ticz from '../../images/ticz.png';
-import AttendeeForm from "../AttendeeForm/AttendeeForm";
+import AttendeeForm from "../AttendeeForm/AttendeeForm.jsx";
 
 const TicketSelection = () => {
   const [selectedTicket, setSelectedTicket] = useState(null);
@@ -26,12 +26,6 @@ const TicketSelection = () => {
     }
   };
 
-  // Handle "Back" button in AttendeeForm
-  const handleBack = () => {
-    setShowAttendeeForm(false); // Hide AttendeeForm and show TicketSelection
-  };
-
-
   return (
     <div className="ticket-body">
       <div className="header">
@@ -42,9 +36,9 @@ const TicketSelection = () => {
           <img className="ticz" src={ticz} alt="logo"></img>
         </div>
         <div className="header-list">
-          <a href="#">Events</a>
-          <a href="#">My Tickets</a>
-          <a href="#">About Project</a>
+          <a href="/events">Events</a>
+          <a href="/my-tickets">My Tickets</a>
+          <a href="/about-project">About Project</a>
         </div>
         <button className="my-tickets-btn">MY TICKETS →</button>
       </div>

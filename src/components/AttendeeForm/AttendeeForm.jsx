@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AttendeeForm.css";
 import cloudIcon from "../../images/cloudIcon.png"
 import { MdEmail } from "react-icons/md";
-import GeneratedTicket from "../GeneratedTicket/GeneratedTicket"
+import GeneratedTicket from "../GeneratedTicket/GeneratedTicket.jsx"
 
 const AttendeeForm = ({onBack, onSubmit, initialValues}) => {
   const [formData, setFormData] = useState({

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import TicketSelection from "./components/TicketSelection/TicketSelection";
-import AttendeeForm from "./components/AttendeeForm/AttendeeForm";
+import TicketSelection from "./components/TicketSelection/TicketSelection.jsx";
+import AttendeeForm from "./components/AttendeeForm/AttendeeForm.jsx";
 import './App.css';
 
 function App() {
