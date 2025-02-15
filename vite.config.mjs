@@ -8,7 +8,7 @@ export default defineConfig({
   },
   server: {
     hmr: {
-      overlay: false, // Disable the HMR overlay
+      overlay: false, // Disable the HMR overlayy
     },
   },
 });
